@@ -5,6 +5,8 @@
 package ec.edu.espe.calculator.view;
 
 import ec.edu.espe.calculator.controller.BasicOperation;
+import ec.edu.espe.calculator.controller.FileManager;
+import ec.edu.espe.calculator.model.Operation;
 
 /**
  *
@@ -183,6 +185,7 @@ public class FrmSubstract extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnReturnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReturnActionPerformed
@@ -200,8 +203,11 @@ public class FrmSubstract extends javax.swing.JFrame {
     }//GEN-LAST:event_btnCancelActionPerformed
 
     private void btnAcceptActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAcceptActionPerformed
-        double difference = BasicOperation.substract(Float.parseFloat(txtfMinuend.getText()), Float.parseFloat(txtfSubtrahend.getText()));
-        txtfDifference.setText(String.valueOf(difference));
+        Operation addOperation = new Operation(Float.parseFloat(txtfMinuend.getText()),
+                Float.parseFloat(txtfSubtrahend.getText()),
+                Float.parseFloat(txtfDifference.getText()));
+
+        FileManager.editJson(addOperation, "Subtract Test Cases.json");
     }//GEN-LAST:event_btnAcceptActionPerformed
 
     /**
