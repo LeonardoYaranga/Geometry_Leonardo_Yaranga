@@ -2,10 +2,6 @@ package ec.edu.espe.calculator.controller;
 
 import ec.edu.espe.calculator.model.Operation;
 import java.util.ArrayList;
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -26,7 +22,7 @@ public class BasicOperationTest {
     @Test
     public void testAdd() {
         operations = FileManager.readJson(operations, "addTestCases.json");
-
+        System.out.println("add");
         for (int i = 0; i < operations.size(); i++) {
             double addend1 = operations.get(i).getValue1();
             double addent2 = operations.get(i).getValue2();;
@@ -55,13 +51,16 @@ public class BasicOperationTest {
      */
     @Test
     public void testSubstract() {
-        System.out.println("substract");
-        double minuend = 2.0;
-        double subtrahend = 3.0;
-        double expResult = -1.0;
-        double result = BasicOperation.substract(minuend, subtrahend);
-        assertEquals(expResult, result, 0);
 
+        operations = FileManager.readJson(operations, "addTestCases.json");
+        System.out.println("substract");
+        for (int i = 0; i < operations.size(); i++) {
+            double minuend = operations.get(i).getValue1();
+            double subtrahend = operations.get(i).getValue2();
+            double expResult = operations.get(i).getExpectedValue();
+            double result = BasicOperation.substract(minuend, subtrahend);
+            assertEquals(expResult, result, 0);
+        }
     }
 
     /**
@@ -69,13 +68,16 @@ public class BasicOperationTest {
      */
     @Test
     public void testMultiply() {
-        System.out.println("multiply");
-        double multiplicand = 0.0;
-        double muliplier = 0.0;
-        double expResult = 0.0;
-        double result = BasicOperation.multiply(multiplicand, muliplier);
-        assertEquals(expResult, result, 0);
 
+        operations = FileManager.readJson(operations, "addTestCases.json");
+        System.out.println("multiply");
+        for (int i = 0; i < operations.size(); i++) {
+            double multiplicand = operations.get(i).getValue1();
+            double muliplier = operations.get(i).getValue2();
+            double expResult = operations.get(i).getExpectedValue();
+            double result = BasicOperation.multiply(multiplicand, muliplier);
+            assertEquals(expResult, result, 0);
+        }
     }
 
     /**
@@ -83,13 +85,14 @@ public class BasicOperationTest {
      */
     @Test
     public void testDivide() {
+        operations = FileManager.readJson(operations, "addTestCases.json");
         System.out.println("divide");
-        double dividend = 0.0;
-        double divisor = 1.0;
-        double expResult = 0.0;
-        double result = BasicOperation.divide(dividend, divisor);
-        assertEquals(expResult, result, 0);
-
+        for (int i = 0; i < operations.size(); i++) {
+            double dividend = operations.get(i).getValue1();
+            double divisor = operations.get(i).getValue2();
+            double expResult = operations.get(i).getExpectedValue();
+            double result = BasicOperation.divide(dividend, divisor);
+            assertEquals(expResult, result, 0);
+        }
     }
-
 }
