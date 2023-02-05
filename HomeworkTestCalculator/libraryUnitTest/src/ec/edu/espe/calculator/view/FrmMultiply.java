@@ -5,6 +5,8 @@
 package ec.edu.espe.calculator.view;
 
 import ec.edu.espe.calculator.controller.BasicOperation;
+import ec.edu.espe.calculator.controller.FileManager;
+import ec.edu.espe.calculator.model.Operation;
 
 /**
  *
@@ -184,6 +186,7 @@ public class FrmMultiply extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnReturnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReturnActionPerformed
@@ -201,8 +204,11 @@ public class FrmMultiply extends javax.swing.JFrame {
     }//GEN-LAST:event_btnCancelActionPerformed
 
     private void btnAcceptActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAcceptActionPerformed
-        double product = BasicOperation.multiply(Float.parseFloat(txtfMultiplicand.getText()), Float.parseFloat(txtfMultiplier.getText()));
-        txtfProduct.setText(String.valueOf(product));
+        Operation addOperation = new Operation(Float.parseFloat(txtfMultiplicand.getText()),
+                Float.parseFloat(txtfMultiplier.getText()),
+                Float.parseFloat(txtfProduct.getText()));
+
+        FileManager.editJson(addOperation, "Multiply Test Cases.json");
     }//GEN-LAST:event_btnAcceptActionPerformed
 
     /**

@@ -206,7 +206,7 @@ public class FrmAdd extends javax.swing.JFrame {
                 Float.parseFloat(txtfAddent2.getText()),
                 Float.parseFloat(txtfSum.getText()));
 
-        FileManager.editJson(addOperation, "addTestCases.json");
+        FileManager.editJson(addOperation, "Add Test Cases.json");
     }//GEN-LAST:event_btnAcceptActionPerformed
 
     private void txtfSumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtfSumActionPerformed

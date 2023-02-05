@@ -5,6 +5,8 @@
 package ec.edu.espe.calculator.view;
 
 import ec.edu.espe.calculator.controller.BasicOperation;
+import ec.edu.espe.calculator.controller.FileManager;
+import ec.edu.espe.calculator.model.Operation;
 import javax.swing.plaf.basic.BasicArrowButton;
 
 /**
@@ -185,6 +187,7 @@ public class FrmDivide extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnReturnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReturnActionPerformed
@@ -198,8 +201,11 @@ public class FrmDivide extends javax.swing.JFrame {
     }//GEN-LAST:event_txtfDividentActionPerformed
 
     private void btnAcceptActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAcceptActionPerformed
-       double quotient = BasicOperation.divide(Float.parseFloat(txtfDivident.getText()), Float.parseFloat(txtfDivisor.getText()));
-        txtfQuotient.setText(String.valueOf(quotient));
+        Operation addOperation = new Operation(Float.parseFloat(txtfDivident.getText()),
+                Float.parseFloat(txtfDivisor.getText()),
+                Float.parseFloat(txtfQuotient.getText()));
+
+        FileManager.editJson(addOperation, "Divide Test Cases.json");
     }//GEN-LAST:event_btnAcceptActionPerformed
 
     private void btnCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelActionPerformed
