@@ -33,7 +33,6 @@ public class SimpleCalculator extends javax.swing.JFrame {
         miSubstract = new javax.swing.JMenuItem();
         miMultiply = new javax.swing.JMenuItem();
         miDivide = new javax.swing.JMenuItem();
-        jMenuItem1 = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
         miIva = new javax.swing.JMenuItem();
         miRentTax = new javax.swing.JMenuItem();
@@ -114,14 +113,6 @@ public class SimpleCalculator extends javax.swing.JFrame {
         });
         mOperations.add(miDivide);
 
-        jMenuItem1.setText("Test ");
-        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem1ActionPerformed(evt);
-            }
-        });
-        mOperations.add(jMenuItem1);
-
         jMenuBar1.add(mOperations);
 
         jMenu2.setText("Tax");
@@ -169,6 +160,7 @@ public class SimpleCalculator extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void miAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miAddActionPerformed
@@ -211,10 +203,6 @@ public class SimpleCalculator extends javax.swing.JFrame {
        frmRentTax.setVisible(true);
     }//GEN-LAST:event_miRentTaxActionPerformed
 
-    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
-        
-    }//GEN-LAST:event_jMenuItem1ActionPerformed
-
     /**
      * @param args the command line arguments
      */
@@ -256,7 +244,6 @@ public class SimpleCalculator extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JMenu mHelp;
     private javax.swing.JMenu mOperations;

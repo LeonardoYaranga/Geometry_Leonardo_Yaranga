@@ -21,12 +21,12 @@ public class BasicOperationTest {
      */
     @Test
     public void testAdd() {
-        operations = FileManager.readJson(operations, "addTestCases.json");
+        operations = FileManager.readJson(operations, "Add Test Cases.json");
         System.out.println("add");
         for (int i = 0; i < operations.size(); i++) {
             double addend1 = operations.get(i).getValue1();
-            double addent2 = operations.get(i).getValue2();;
-            double expResult = operations.get(i).getExpectedValue();;
+            double addent2 = operations.get(i).getValue2();
+            double expResult = operations.get(i).getExpectedValue();
             double result = BasicOperation.add(addend1, addent2);
             assertEquals(expResult, result, 0);
         }
@@ -52,7 +52,7 @@ public class BasicOperationTest {
     @Test
     public void testSubstract() {
 
-        operations = FileManager.readJson(operations, "addTestCases.json");
+        operations = FileManager.readJson(operations, "Subtract Test Cases.json");
         System.out.println("substract");
         for (int i = 0; i < operations.size(); i++) {
             double minuend = operations.get(i).getValue1();
@@ -69,7 +69,7 @@ public class BasicOperationTest {
     @Test
     public void testMultiply() {
 
-        operations = FileManager.readJson(operations, "addTestCases.json");
+        operations = FileManager.readJson(operations, "Multiply Test Cases.json");
         System.out.println("multiply");
         for (int i = 0; i < operations.size(); i++) {
             double multiplicand = operations.get(i).getValue1();
@@ -85,7 +85,7 @@ public class BasicOperationTest {
      */
     @Test
     public void testDivide() {
-        operations = FileManager.readJson(operations, "addTestCases.json");
+        operations = FileManager.readJson(operations, "Divide Test Cases.json");
         System.out.println("divide");
         for (int i = 0; i < operations.size(); i++) {
             double dividend = operations.get(i).getValue1();
