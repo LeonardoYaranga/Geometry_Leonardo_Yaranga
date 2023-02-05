@@ -3,5 +3,15 @@
     "value1": 1.0,
     "value2": 2.0,
     "expectedValue": 3.0
+  },
+  {
+    "value1": 4.0,
+    "value2": 5.0,
+    "expectedValue": 9.0
+  },
+  {
+    "value1": 7.0,
+    "value2": 5.0,
+    "expectedValue": 9.0
   }
 ]

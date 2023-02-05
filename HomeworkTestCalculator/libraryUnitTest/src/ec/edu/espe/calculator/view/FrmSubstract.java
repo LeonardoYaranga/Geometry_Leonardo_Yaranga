@@ -203,9 +203,9 @@ public class FrmSubstract extends javax.swing.JFrame {
     }//GEN-LAST:event_btnCancelActionPerformed
 
     private void btnAcceptActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAcceptActionPerformed
-        Operation addOperation = new Operation(Float.parseFloat(txtfMinuend.getText()),
-                Float.parseFloat(txtfSubtrahend.getText()),
-                Float.parseFloat(txtfDifference.getText()));
+        Operation addOperation = new Operation(Double.parseDouble(txtfMinuend.getText()),
+                Double.parseDouble(txtfSubtrahend.getText()),
+                Double.parseDouble(txtfDifference.getText()));
 
         FileManager.editJson(addOperation, "Subtract Test Cases.json");
     }//GEN-LAST:event_btnAcceptActionPerformed
@@ -267,7 +267,7 @@ public class FrmSubstract extends javax.swing.JFrame {
         txtfDifference.setText("");
         txtfMinuend.setText("");
         txtfSubtrahend.setText("");
-        
+
     }
-    
+
 }

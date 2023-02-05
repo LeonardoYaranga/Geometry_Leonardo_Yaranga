@@ -202,9 +202,9 @@ public class FrmAdd extends javax.swing.JFrame {
     }//GEN-LAST:event_txtfAddent1ActionPerformed
 
     private void btnAcceptActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAcceptActionPerformed
-        Operation addOperation = new Operation(Float.parseFloat(txtfAddent1.getText()),
-                Float.parseFloat(txtfAddent2.getText()),
-                Float.parseFloat(txtfSum.getText()));
+        Operation addOperation = new Operation(Double.parseDouble(txtfAddent1.getText()),
+                Double.parseDouble(txtfAddent2.getText()),
+                Double.parseDouble(txtfSum.getText()));
 
         FileManager.editJson(addOperation, "Add Test Cases.json");
     }//GEN-LAST:event_btnAcceptActionPerformed

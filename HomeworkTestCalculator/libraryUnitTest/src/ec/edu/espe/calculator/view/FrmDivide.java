@@ -201,9 +201,9 @@ public class FrmDivide extends javax.swing.JFrame {
     }//GEN-LAST:event_txtfDividentActionPerformed
 
     private void btnAcceptActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAcceptActionPerformed
-        Operation addOperation = new Operation(Float.parseFloat(txtfDivident.getText()),
-                Float.parseFloat(txtfDivisor.getText()),
-                Float.parseFloat(txtfQuotient.getText()));
+        Operation addOperation = new Operation(Double.parseDouble(txtfDivident.getText()),
+                Double.parseDouble(txtfDivisor.getText()),
+                Double.parseDouble(txtfQuotient.getText()));
 
         FileManager.editJson(addOperation, "Divide Test Cases.json");
     }//GEN-LAST:event_btnAcceptActionPerformed

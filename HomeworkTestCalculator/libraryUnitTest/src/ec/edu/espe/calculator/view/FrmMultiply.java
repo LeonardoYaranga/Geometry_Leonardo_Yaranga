@@ -204,9 +204,9 @@ public class FrmMultiply extends javax.swing.JFrame {
     }//GEN-LAST:event_btnCancelActionPerformed
 
     private void btnAcceptActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAcceptActionPerformed
-        Operation addOperation = new Operation(Float.parseFloat(txtfMultiplicand.getText()),
-                Float.parseFloat(txtfMultiplier.getText()),
-                Float.parseFloat(txtfProduct.getText()));
+        Operation addOperation = new Operation(Double.parseDouble(txtfMultiplicand.getText()),
+                Double.parseDouble(txtfMultiplier.getText()),
+                Double.parseDouble(txtfProduct.getText()));
 
         FileManager.editJson(addOperation, "Multiply Test Cases.json");
     }//GEN-LAST:event_btnAcceptActionPerformed
