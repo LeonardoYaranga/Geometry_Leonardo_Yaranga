@@ -10,50 +10,48 @@ package ec.edu.espe.calculator.model;
  */
 public class Operation {
 
-    private double value1;
-    private double value2;
+    private double firstValue;
+    private double secondValue;
     private double expectedValue;
 
     public Operation() {
-        this.value1 = 0;
-        this.value2 = 0;
+        this.firstValue = 0;
+        this.secondValue = 0;
         this.expectedValue = 0;
     }
 
-    public Operation(double value1, double value2, double expectedValue) {
-        this.value1 = value1;
-        this.value2 = value2;
+    public Operation(double firstValue, double secondValue, double expectedValue) {
+        this.firstValue = firstValue;
+        this.secondValue = secondValue;
         this.expectedValue = expectedValue;
     }
 
-    
-
     /**
-     * @return the value1
+     * @return the firstValue
      */
-    public double getValue1() {
-        return value1;
+    public double getFirstValue() {
+        return firstValue;
     }
 
     /**
-     * @param value1 the value1 to set
+     * @param firstValue the firstValue to set
      */
-    public void setValue1(double value1) {
-        this.value1 = value1;
+    public void setFirstValue(double firstValue) {
+        this.firstValue = firstValue;
     }
 
     /**
-     * @return the value2
+     * @return the secondValue
      */
-    public double getValue2() {
-        return value2;
+    public double getSecondValue() {
+        return secondValue;
     }
 
     /**
-     * @param value2 the value2 to set
+     * @param secondValue the secondValue to set
      */
-    public void setValue2(double value2) {
-        this.value2 = value2;
+    public void setSecondValue(double secondValue) {
+        this.secondValue = secondValue;
     }
 
     /**
@@ -69,7 +67,5 @@ public class Operation {
     public void setExpectedValue(double expectedValue) {
         this.expectedValue = expectedValue;
     }
-
-  
 
 }

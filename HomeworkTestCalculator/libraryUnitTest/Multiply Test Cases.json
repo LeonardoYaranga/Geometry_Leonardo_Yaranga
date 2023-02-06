@@ -1,7 +1,7 @@
 [
   {
-    "value1": 4.0,
-    "value2": 5.0,
-    "expectedValue": 20.0
+    "value1": 78.0,
+    "value2": 899.333,
+    "expectedValue": 70147.974
   }
 ]
